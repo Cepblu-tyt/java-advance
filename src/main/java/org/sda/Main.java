@@ -1,5 +1,6 @@
 package org.sda;
 
+import org.sda.model.Dog;
 import org.sda.model.Person;
 
 public class Main {
@@ -17,5 +18,13 @@ public class Main {
 
         System.out.println(person2.getFirstName());
         System.out.println(person2.getLastName());
+
+
+        Dog dog = new Dog(true, "German shepperd");
+        System.out.println(dog);
+        System.out.println(dog.getAge());
+        System.out.println(dog.getWeight());
     }
-}
+
+
+    }

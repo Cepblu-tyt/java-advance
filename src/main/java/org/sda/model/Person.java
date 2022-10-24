@@ -40,7 +40,10 @@ public class Person {
         this.id = new Random().nextLong();
         }
 
-        // getters and setters
+    public Person(long l, String firstName, String lastName, String phone, String email, String address) {
+    }
+
+    // getters and setters
     public Long getId() {
         return id;
     }
