@@ -2,6 +2,7 @@ package org.sda;
 
 import org.sda.model.Dog;
 import org.sda.model.Person;
+import org.sda.model.Pocket;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,5 +27,7 @@ public class Main {
         System.out.println(dog.getWeight());
     }
 
+    Pocket pocket1 = new Pocket();
 
-    }
+
+}
