@@ -4,12 +4,11 @@ package org.sda.model;
  * Exercise 1
  *
  * @author Sergei Oksanen
- *
  */
 public class Dog {
     private String name;
     private int age;
-    private boolean isMale;
+    private boolean isMale; // Gender
     private String race;
     private float weight;
 
@@ -19,11 +18,10 @@ public class Dog {
         this.isMale = isMale;
         this.race = race;
         this.weight = weight;
-
     }
 
     public Dog(boolean isMale, String race) {
-        this("Tommy", 2, isMale, race, 10.0f);
+        this("TOMMY", 2, isMale, race, 10.0f);
     }
 
     public int getAge() {
@@ -31,14 +29,21 @@ public class Dog {
     }
 
     public void setAge(int age) {
-        if(age > 0){
-                    this.age = age; }
+        if (age > 0) {
+            this.age = age;
+        }
     }
 
     public float getWeight() {
-        if (weight > 0.5) {
+        return weight;
     }
-return weight;}
+
+    public void setWeight(float weight) {
+        if (weight > 0.5) {
+            this.weight = weight;
+        }
+    }
+
     @Override
     public String toString() {
         return "Dog{" +
@@ -48,12 +53,5 @@ return weight;}
                 ", race='" + race + '\'' +
                 ", weight=" + weight +
                 '}';
-    }
-
-    public void setWeight(float weight) {
-        this.weight = weight;
-
-
-
     }
 }

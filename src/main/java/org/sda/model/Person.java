@@ -6,23 +6,24 @@ import java.util.Random;
  * Person model
  * Example of Encapsulation
  *
- * @author Sergei Oksanen
+ * @author Vinod John
  */
-
 public class Person {
     // Fields
     private Long id;
     private String firstName;
     private String lastName;
     private String email;
-    private String address;
+    private String phoneNumber;
+    private String address; //source address
 
-    //All arguments constructor
-    public Person(Long id, String firstName, String lastName, String email, String address) {
+    // All arguments constructor
+    public Person(Long id, String firstName, String lastName, String email, String phoneNumber, String address) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.phoneNumber = phoneNumber;
         this.address = address;
     }
 
@@ -30,20 +31,17 @@ public class Person {
     public Person(Long id, String address) {
         this.id = id;
         this.address = address;
-
     }
 
-    //Java will create a constructor automatically by default. it is called as default constructor
+    //Java will create a constructor automatically by default. it is called as default constructor.
 
-    // No- argumens constructor
-    public Person(){
+    //No-Arg constructor
+    public Person() {
         this.id = new Random().nextLong();
-        }
-
-    public Person(long l, String firstName, String lastName, String phone, String email, String address) {
     }
 
-    // getters and setters
+
+    //Getters and Setters
     public Long getId() {
         return id;
     }
@@ -57,7 +55,9 @@ public class Person {
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        if(!firstName.isEmpty()) {
+            this.firstName = firstName;
+        }
     }
 
     public String getLastName() {
@@ -76,6 +76,14 @@ public class Person {
         this.email = email;
     }
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     public String getAddress() {
         return address;
     }
@@ -84,6 +92,7 @@ public class Person {
         this.address = address;
     }
 
+
     @Override
     public String toString() {
         return "Person{" +
@@ -91,7 +100,9 @@ public class Person {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 ", address='" + address + '\'' +
                 '}';
     }
+
 }
