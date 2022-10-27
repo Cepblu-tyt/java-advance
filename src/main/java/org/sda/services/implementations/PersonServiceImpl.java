@@ -3,6 +3,8 @@ package org.sda.services.implementations;
 import org.sda.models.Person;
 import org.sda.services.PersonService;
 
+import java.time.LocalDate;
+
 /**
  * Implementation of person service
  *
@@ -11,11 +13,11 @@ import org.sda.services.PersonService;
 public class PersonServiceImpl implements PersonService {
     @Override
     public int getPersonBirthYear(int age) {
-        return 0;
+        return LocalDate.now().getYear() - age;
     }
 
     @Override
     public String getPersonFullName(Person person) {
-        return null;
+        return person.getFirstName() + " " + person.getLastName();
     }
 }
