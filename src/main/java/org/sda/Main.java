@@ -14,7 +14,7 @@ public class Main {
         System.out.println(person.getId());
 
         //All-argument constructor call
-        Person person1 = new Person(12345L, "Vinod", "John", "abc@gmail.com", "+37258964253", "Tartu tee, Tallinn");
+        Person person1 = new Person(12345L, "Sergei", "Oksanen", "abc@gmail.com", "+372112", "Tartu tee, Tallinn");
         System.out.println(person1.toString());
         System.out.println(person1.getEmail());
 
@@ -44,11 +44,11 @@ public class Main {
 
         //Overriding
         Person personOverride = new Person();
-        personOverride.setEmail("vinodjohn@gmail.com");
+        personOverride.setEmail("sergei.oksanen@gmail.com");
         System.out.println(personOverride.getEmail());
 
         Passenger passengerOverride = new Passenger();
-        passengerOverride.setEmail("vinodjohn@gmail.com");
+        passengerOverride.setEmail("sergei.oksanen@gmail.com");
         System.out.println(passengerOverride.getEmail());
 
 
