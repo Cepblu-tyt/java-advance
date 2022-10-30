@@ -10,7 +10,7 @@ package org.sda.model;
  * c) Setter should not accept values below 0 and greater than 3000. It may print a message
  * like „I don’t have enough space in my pocket for as much money!”
  *
- * @author Vinod John
+ * @author Sergei Oksanen
  */
 public class Pocket {
     private double money;

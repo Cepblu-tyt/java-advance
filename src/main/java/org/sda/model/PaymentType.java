@@ -3,7 +3,7 @@ package org.sda.model;
 /**
  * List of PaymentType
  *
- * @author Vinod John
+ * @author Sergei Oksanen
  */
 public enum PaymentType {
 

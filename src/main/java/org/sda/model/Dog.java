@@ -3,7 +3,7 @@ package org.sda.model;
 /**
  * Exercise 1
  *
- * @author Vinod John
+ * @author Sergei Oksanen
  */
 public class Dog {
     private String name;

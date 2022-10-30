@@ -6,7 +6,7 @@ import java.util.Random;
  * Person model
  * Example of Encapsulation
  *
- * @author Vinod John
+ * @author Sergei Oksanen
  */
 public class Person {
     // Fields

@@ -8,7 +8,7 @@ package org.sda.model;
  * b) Create distanceFromEarth method.
  * c) Verify both methods for multiple planets
  *
- * @author Vinod John
+ * @author Sergei Oksanen
  */
 public enum Planets {
     MARS(250000, "Adjacent Mars"),
