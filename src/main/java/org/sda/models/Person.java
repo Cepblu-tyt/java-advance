@@ -1,32 +1,36 @@
 package org.sda.models;
 
+/**
+ * Person model
+ *
+ * @author Sergei Oksanen
+ */
 public class Person {
-
-    public static String FirstName;
-    public static String LastName;
-    public static int Age;
+    private String firstName;
+    private String lastName;
+    private int age;
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
-    public static void setFirstName(String firstName) {
-        FirstName = firstName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
-    public static void setLastName(String lastName) {
-        LastName = lastName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public int getAge() {
-        return Age;
+        return age;
     }
 
-    public static void setAge(int age) {
-        Age = age;
+    public void setAge(int age) {
+        this.age = age;
     }
 }
