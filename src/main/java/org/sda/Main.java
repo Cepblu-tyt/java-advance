@@ -5,6 +5,8 @@ import org.sda.models.Person;
 import org.sda.services.PersonService;
 import org.sda.services.implementations.PersonServiceImpl;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) throws PersonNotFoundException {
         //INTERFACE
@@ -38,7 +40,7 @@ public class Main {
         } finally { // This blocked will be executed irrespective of catch blocks
             int a = 15;
             System.out.println("Finally executed, a: " + a);
-                }
+        }
 
         //Custom / user-define exceptions
         try {
@@ -46,5 +48,17 @@ public class Main {
         } catch (PersonNotFoundException e) {
             System.out.println(e.getLocalizedMessage());
         }
+
+
+        try {
+            Scanner scanner = new Scanner(System.in);
+            int i = scanner.nextInt();
+            System.out.println(i);
+        } catch (Inpi.nextInt()) {
+            System.out.println();
+        } catch (Exception.  String) {
+            System.out.println("Hey! That's  not a value! Try once more.");
+        }
     }
+
 }
