@@ -1,11 +1,12 @@
 package org.sda;
 
+import org.sda.exceptions.PersonNotFoundException;
 import org.sda.models.Person;
 import org.sda.services.PersonService;
 import org.sda.services.implementations.PersonServiceImpl;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws PersonNotFoundException {
         //INTERFACE
         Person person = new Person();
         person.setFirstName("Sergei");
@@ -37,6 +38,13 @@ public class Main {
         } finally { // This blocked will be executed irrespective of catch blocks
             int a = 15;
             System.out.println("Finally executed, a: " + a);
+                }
+
+        //Custom / user-define exceptions
+        try {
+            System.out.println(personService.findPersonByFirstName("John").toString());
+        } catch (PersonNotFoundException e) {
+            System.out.println(e.getLocalizedMessage());
         }
     }
 }
