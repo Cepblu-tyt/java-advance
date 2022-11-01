@@ -1,10 +1,14 @@
 package org.sda;
 
+import org.sda.abstracts.Food;
+import org.sda.abstracts.Fruit;
+import org.sda.abstracts.Veggie;
 import org.sda.exceptions.PersonNotFoundException;
 import org.sda.models.Person;
 import org.sda.services.PersonService;
 import org.sda.services.implementations.PersonServiceImpl;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -51,13 +55,31 @@ public class Main {
 
 
         try {
-            Scanner scanner = new Scanner(System.in);
+            displayNumber();
+        } catch (InputMismatchException e) {
+            System.out.println(e.getLocalizedMessage());
+        }
+
+        //Abstract
+        Fruit fruit = new Fruit("Red");
+        fruit.eat();
+        Veggie veggie = new Veggie("Green");
+        Food food = veggie;
+        food.eat();
+
+
+    }
+
+    private static void displayNumber(){
+        Scanner scanner = new Scanner(System.in);
+        if(scanner.hasNextInt()) {
             int i = scanner.nextInt();
-            System.out.println(i);
-        } catch (Inpi.nextInt()) {
-            System.out.println();
-        } catch (Exception.  String) {
-            System.out.println("Hey! That's  not a value! Try once more.");
+            System.out.println("int -> " + i);
+            } else if(scanner.hasNextDouble()) {
+            double d = scanner.nextDouble();
+            System.out.println("double -> " + d);
+        } else {
+          throw new InputMismatchException("Hey! That's  not a value! Try once more.");
         }
     }
 
