@@ -3,6 +3,8 @@ package org.sda;
 import org.sda.generics.*;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,5 +33,19 @@ public class Main {
       Snack snack1 = new Snack(5);
       Snack snack2 = new Snack(3);
       System.out.println("Snack 1 is better than snack2: " + snack1.isBetter(snack2) );
+
+      //List
+
+      List<String> animalList= new ArrayList<>();
+      animalList.add("Lion");
+      animalList.add("Tiger");
+      animalList.add("Dog");
+
+      System.out.println(animalList.get(1));
+
+      for (String animal : animalList){
+        System.out.println(animal);
+      }
+
     }
 }
