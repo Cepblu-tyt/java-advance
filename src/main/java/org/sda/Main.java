@@ -1,9 +1,6 @@
 package org.sda;
 
-import org.sda.generics.Fruit;
-import org.sda.generics.GenericExtendFood;
-import org.sda.generics.GenericFood;
-import org.sda.generics.Vegetable;
+import org.sda.generics.*;
 
 import java.math.BigDecimal;
 
@@ -29,5 +26,10 @@ public class Main {
       Vegetable vegetable = new Vegetable();
       GenericExtendFood<Vegetable> vegetableGenericExtendFood = new GenericExtendFood<>(vegetable);
       System.out.println(vegetableGenericExtendFood.getRating());
+
+      //Generic type  - interface
+      Snack snack1 = new Snack(5);
+      Snack snack2 = new Snack(3);
+      System.out.println("Snack 1 is better than snack2: " + snack1.isBetter(snack2) );
     }
 }
