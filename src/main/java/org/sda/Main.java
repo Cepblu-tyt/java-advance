@@ -3,8 +3,7 @@ package org.sda;
 import org.sda.generics.*;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -46,6 +45,45 @@ public class Main {
       for (String animal : animalList){
         System.out.println(animal);
       }
+
+      //SET
+
+      Set<String> countrySet = new HashSet<>();
+      countrySet.add("Eesti");
+      countrySet.add("Saksamaa");
+      countrySet.add("Poola");
+      countrySet.add("Rootsi");
+      //countrySet.add("Eesti"); - duplicates not allowed
+
+      for (String country: countrySet) {
+
+      System.out.println(country);
+
+    }
+      TreeSet countryTreeSet = new TreeSet(countrySet); // Stored as Sorted
+      System.out.println(countryTreeSet);
+
+
+      //MAP
+
+      Map<String, String> fullName = new HashMap<>();
+      fullName.put("Sergei", "Oksanen");
+      fullName.put("Santa", "Claus");
+      fullName.put("Kurt", "Cabain");
+
+      System.out.println(fullName);
+      System.out.println(fullName.get("Sergei"));
+      System.out.println(fullName.remove("Kurt"));
+      System.out.println(fullName);
+
+      Map<String, Integer> ageMap  = new HashMap<>();
+
+
+      Map<String, List<String>> friendsMap  = new HashMap<>();
+
+
+
+      Map<String, Map<String, String>> detailsMap  = new HashMap<>();
 
     }
 }
