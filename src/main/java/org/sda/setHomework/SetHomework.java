@@ -1,9 +1,6 @@
 package org.sda.setHomework;
 
-import java.util.HashSet;
-import java.util.InputMismatchException;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class SetHomework {
 
@@ -11,26 +8,29 @@ public class SetHomework {
         Scanner scanner = new Scanner(System.in);
 
         Set<String> colorsSet = new HashSet<>(); // Non-sorted, randomly stored
+        boolean isAdd = true;
 
-        colorsSet.add("Blue");    // 525632
-        colorsSet.add("Black");  // 152635
-        colorsSet.add("White");
-        colorsSet.add("Red");
-        colorsSet.add("Green");
-        colorsSet.add("Orange");
-        colorsSet.add("Gray");
-        colorsSet.add("Yellow");
-        System.out.println(colorsSet);
+        while (isAdd) {
+            System.out.println("Enter color to add it to list ");
+            String addColor = scanner.next();
 
-        private static void displayAddedColors () {
-            if (colorsSet.contains(scanner.hasNextLine())) {
-                int i = scanner.nextInt();
-                System.out.println("color -> " + i);
+            if (!colorsSet.contains(addColor)) {
+                colorsSet.add(addColor);
+                System.out.println("'" + addColor + "' added to the list. Do you want to add more colors? (true/false)");
             } else {
-                throw new InputMismatchException("This is not a color! Please input color of the list!");
+                System.out.println("The color already exists, do you want to add an other color? (true/false)");
             }
-
+            isAdd = scanner.nextBoolean();
         }
+        for (String color : colorsSet) {
+            System.out.println(color);
+        }
+
+        TreeSet colorsTreeSet = new TreeSet(colorsSet); // Stored as Sorted
+        System.out.println(colorsTreeSet);
     }
 }
+
+
+
 
