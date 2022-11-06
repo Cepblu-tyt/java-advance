@@ -6,9 +6,6 @@ public class SetHomework {
     static Set<String> colorsSet = new HashSet<>();
      private static final Scanner SCANNER = new Scanner(System.in);
     public static void main(String[] args) {
-
-
-        Set<String> colorsSet = new HashSet<>();
         menuOperation(colorsSet);
     }
 
